@@ -42,6 +42,7 @@ namespace MiniProjectClassGradeCalc
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.clearListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_G1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_G3)).BeginInit();
@@ -55,10 +56,12 @@ namespace MiniProjectClassGradeCalc
             this.LSTresults.Name = "LSTresults";
             this.LSTresults.Size = new System.Drawing.Size(573, 173);
             this.LSTresults.TabIndex = 0;
+            this.LSTresults.SelectedIndexChanged += new System.EventHandler(this.LSTresults_SelectedIndexChanged);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearListToolStripMenuItem,
             this.calculateToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -157,6 +160,13 @@ namespace MiniProjectClassGradeCalc
             this.label5.TabIndex = 10;
             this.label5.Text = "Grade Calculator";
             // 
+            // clearListToolStripMenuItem
+            // 
+            this.clearListToolStripMenuItem.Name = "clearListToolStripMenuItem";
+            this.clearListToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.clearListToolStripMenuItem.Text = "Clear List";
+            this.clearListToolStripMenuItem.Click += new System.EventHandler(this.clearListToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +189,7 @@ namespace MiniProjectClassGradeCalc
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Grade Calculator";
+            this.Enter += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_G1)).EndInit();
@@ -204,6 +215,7 @@ namespace MiniProjectClassGradeCalc
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStripMenuItem clearListToolStripMenuItem;
     }
 }
 

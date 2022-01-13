@@ -78,5 +78,18 @@ namespace MiniProjectClassGradeCalc
                 MessageBox.Show("Error!!!!! - Check your entries.");
             }
         }
+
+        private void LSTresults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (LSTresults.Items.Count > 0)
+            {
+                LSTresults.Items.Clear();
+            }
+        }
     }
 }
